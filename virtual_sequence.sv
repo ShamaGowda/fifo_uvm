@@ -27,7 +27,7 @@ class virtual_sequence extends uvm_sequence;
             end
 
             begin: read_thread
-                // Wait for enough writes to complete before starting reads
+               
                 #500;
                 `uvm_info("VSEQ", "Starting read sequence", UVM_LOW)
                 rd_seq = read_sequence::type_id::create("rd_seq");
